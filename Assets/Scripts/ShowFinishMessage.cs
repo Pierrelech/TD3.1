@@ -18,7 +18,7 @@ public class ShowFinishText : MonoBehaviour
             }
 
             // Position du texte devant la caméra
-            Vector3 position = cam.transform.position + cam.transform.forward * 2f + Vector3.up * 0.5f;
+            Vector3 position = cam.transform.position + cam.transform.forward * 3f + Vector3.up * 0.5f;
             currentText = Instantiate(finishTextPrefab, position, Quaternion.identity);
 
             // Le texte regarde la caméra
