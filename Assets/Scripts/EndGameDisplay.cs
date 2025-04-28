@@ -15,7 +15,7 @@ public class EndGameDisplay : MonoBehaviour
     public GameObject player;
 
     private float startTime;         // Time when the mission starts
-    private int collisionCount = -2;  // Number of collisions
+    private int collisionCount = -1;  // Number of collisions
 
     private bool timerStarted = false;  // To ensure timer starts only when the player does an action
 
