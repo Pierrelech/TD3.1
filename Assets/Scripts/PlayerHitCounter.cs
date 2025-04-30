@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class PlayerHitCounter : MonoBehaviour
 {
-    public int collisionCount = 0;
+    public int collisionCount = -2;
+    public EndGameDisplay endGameDisplay;
     private HashSet<GameObject> alreadyTouched = new HashSet<GameObject>();
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -12,6 +13,7 @@ public class PlayerHitCounter : MonoBehaviour
         {
             collisionCount++;
             alreadyTouched.Add(hit.gameObject);
+            endGameDisplay.OnCollisionDetected();
 
             Debug.Log("Touché : " + hit.gameObject.name + " | Total : " + collisionCount);
         }

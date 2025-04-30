@@ -43,6 +43,7 @@ public class rayGun : MonoBehaviour
         mousePos.z = 300f;
         endPoint = cam.ScreenToWorldPoint(mousePos);
 
+
         // Find direction of beam
         Vector3 dir = endPoint - origin;
         dir.Normalize();
