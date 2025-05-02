@@ -26,8 +26,6 @@ public class ResetTaskManager : MonoBehaviour
     public int clickCount = 0;
     public int errorCount = 0;
 
-    private bool taskStarted = false;
-
     void Start()
     {
         // Sauvegarder la position de départ de chaque cube
@@ -51,8 +49,6 @@ public class ResetTaskManager : MonoBehaviour
         timeElapsed = 0f;
         clickCount = 0;
         errorCount = 0;
-        taskStarted = false;
-        FindObjectOfType<EvaluationManager>().ResetAll();
 
         // Réinitialise chaque cube
         foreach (var cube in cubes)
@@ -69,5 +65,6 @@ public class ResetTaskManager : MonoBehaviour
                 cube.showCube.SetActive(false);
             }
         }
+        FindObjectOfType<EvaluationManager>().ResetAll();
     }
 }
