@@ -12,7 +12,7 @@ public class ObjectClick : MonoBehaviour
 
     public DragObject dragObjectScript; // référence à DragObject
 
-    private bool canUse = true; // 🕒 bloque l'accès à Manage pendant un petit temps
+    private bool canUse = true; // bloque l'accès à Manage pendant un petit temps
 
     void Update()
     {
